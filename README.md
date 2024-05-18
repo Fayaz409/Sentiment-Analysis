@@ -22,7 +22,7 @@ This is a simple web application for sentiment analysis of text reviews. It uses
 
 ```bash
 git clone https://github.com/Fayaz409/Sentiment-Analysis.git
-cd sentiment-analysis
+cd Sentiment-Analysis
 ```
 
 2. Create a virtual environment:
