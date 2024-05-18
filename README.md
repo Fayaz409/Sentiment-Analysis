@@ -93,10 +93,6 @@ This project is licensed under the MIT License.
 * NLTK is used for text preprocessing.
 * Flask is used for building the web application.
 
-## Contact
-
-For any questions or suggestions, please open an issue or contact [ftunio06@gmail.com](mailto:ftunio06@gmail.com).
-
 # The Trained Model file.
 
 
@@ -153,3 +149,7 @@ The trained model, TF-IDF vectorizer, and label encoder are saved using pickle f
 * Explore more advanced text preprocessing techniques like stemming, part-of-speech tagging, and named entity recognition.
 * Utilize pre-trained word embeddings like Word2Vec or GloVe to capture semantic relationships between words.
 * Integrate the sentiment analysis model into a web application or other systems for real-world use cases.
+
+## Contact
+
+For any questions or suggestions, please open an issue or contact [ftunio06@gmail.com](mailto:ftunio06@gmail.com).
