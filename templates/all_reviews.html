@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Reviews</title>
+    <!-- <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"> -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-sans leading-normal tracking-normal">
+    {% include 'navbar.html' %}
+<!-- Rest of the page content goes here -->
+    <div class="container mx-auto my-8">
+        <h1 class="text-3xl font-bold leading-tight mb-5">All Product Reviews</h1>
+        {% if reviews %}
+            <div class="bg-white shadow-md rounded my-6">
+                <ul class="list-none space-y-4 p-4">
+                {% for review in reviews %}
+                    <li class="p-4 hover:bg-gray-50 rounded-md">
+                        <p><strong>Email:</strong> {{ review.email }}</p>
+                        <p><strong>Username:</strong> {{ review.username }}</p>
+                        <p><strong>Product Name:</strong> {{ review.product_name }}</p>
+                        <p><strong>Review:</strong> {{ review.review_content }}</p>
+                        <p><strong>Review Time:</strong> {{ review.review_time.strftime('%Y-%m-%d %H:%M') }}</p>
+                        <p><strong>Sentiment:</strong> {{ review.sentiment }}</p>
+                    </li>
+                    <hr class="border-t mx-4">
+                {% endfor %}
+                </ul>
+            </div>
+        {% else %}
+            <p class="text-center text-gray-500">No reviews found.</p>
+        {% endif %}
+    </div>
+</body>
+</html>

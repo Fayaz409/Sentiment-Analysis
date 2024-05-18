@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thanks</title>
+    <!-- Include Tailwind CSS from CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Custom animation for fading in the thank you message */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="bg-blue-50 flex items-center justify-center h-screen">
+    {% include 'navbar.html' %}
+<!-- Rest of the page content goes here -->
+    <div class="p-6 md:p-12 bg-white shadow-xl rounded-lg transform transition duration-500 ease-in-out animate-fadeIn">
+        <h2 class="text-2xl font-bold text-center text-blue-800 mb-2">Thank You, {{ username }}!</h2>
+        <p class="text-md text-gray-600">Your review has been successfully submitted. An email confirmation will be sent to <span class="text-blue-600 font-semibold">{{ email }}</span>.</p>
+    </div>
+
+    <script>
+        // Extra JavaScript for enhanced user interaction, if necessary
+    </script>
+</body>
+</html>

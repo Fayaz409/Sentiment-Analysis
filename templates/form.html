@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <form class="flex mx-3 justify-between bg-slate-400" action="{{ url_for('form') }}" method="post">
+        <input type="text" name="maths" placeholder="math" required="required">
+        <input type="text" name="chemistry" placeholder="chemistry" required="required">
+        <input type="text" name="physics" placeholder="physics" required="required">
+        <button class="btn btn-primary btn-block btn-large" type="submit">Submit</button>
+    </form>
+    <h1 class="text-3xl text-center flex font-semibold">Annotate</h1>
+    <br>
+    <h3>you are <div class="text-3xl text-center font-extralight">{{result}}</div></h3>
+    <h3>Your average score is</h3> <div class="text-3xl text-center ">{{score}}</div>
+    <br>
+</body>
+</html>

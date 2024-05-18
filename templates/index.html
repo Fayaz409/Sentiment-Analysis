@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script>
+        function imgError(image) {
+            image.onerror = "";
+            image.src = "https://via.placeholder.com/400x300?text=No+Image+Available"; // URL of a generic placeholder
+            return true;
+        }
+    </script>
+</head>
+<body class="bg-gray-100 p-5">
+    {% include 'navbar.html' %}
+    <h2 class="text-2xl font-bold mb-5 text-center">Product Gallery</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        {% for product in products %}
+        <div class="max-w-sm mx-auto bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300">
+            <img src="{{ product['img_link'] }}" alt="Product Image" class="w-full h-48 object-cover" onerror="imgError(this);">
+            <div class="p-4">
+                <h3 class="font-bold text-lg mb-2">{{ product['product_name'] }}</h3>
+                <p class="text-gray-800 text-sm">Price: ${{ product['discounted_price'] }}</p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
+
+
