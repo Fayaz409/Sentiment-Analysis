@@ -83,20 +83,12 @@ Enter a text review in the input box on the web interface and submit. The model 
 * Make sure to train the model and save the model, vectorizer, and encoder before running the application. You can add a separate training script or include training code in `model.py`.
 * Ensure the paths to the model, vectorizer, and encoder files are correctly specified in `model.py`.
 
-## License
-
-This project is licensed under the MIT License.
-
-## Acknowledgments
-
-* This project uses TensorFlow/Keras for building the neural network model.
-* NLTK is used for text preprocessing.
-* Flask is used for building the web application.
 
 # The Trained Model file.
 
 
-## You can find the code where I have trained my Sentiment Model which is used in the website.
+## You can find the code where I have trained my Sentiment Model which is used in the website in the SentmentAnalysis.ipynb file.
+## and the dataset in Sentment_model file in csv files.
 
 The code utilizes an Amazon product review dataset. Here's a brief overview of the data preparation steps:
 
@@ -149,6 +141,16 @@ The trained model, TF-IDF vectorizer, and label encoder are saved using pickle f
 * Explore more advanced text preprocessing techniques like stemming, part-of-speech tagging, and named entity recognition.
 * Utilize pre-trained word embeddings like Word2Vec or GloVe to capture semantic relationships between words.
 * Integrate the sentiment analysis model into a web application or other systems for real-world use cases.
+
+  ## License
+
+This project is licensed under the MIT License.
+
+## Acknowledgments
+
+* This project uses TensorFlow/Keras for building the neural network model.
+* NLTK is used for text preprocessing.
+* Flask is used for building the web application.
 
 ## Contact
 
