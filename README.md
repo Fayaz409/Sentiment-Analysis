@@ -21,7 +21,7 @@ This is a simple web application for sentiment analysis of text reviews. It uses
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/Fayaz409/sentiment-analysis.git
+git clone https://github.com/Fayaz409/Sentiment-Analysis.git
 cd sentiment-analysis
 ```
 
